@@ -1,0 +1,239 @@
+@media screen and (max-width: 1850px)
+  .about
+    &__container
+      width: 90%
+      margin: auto
+    &__row
+      justify-content: space-between
+    &__image-block
+      width: 700px
+    &__text
+      &--center
+        max-width: 630px
+      &-block
+        margin: 0
+        max-width: 600px
+        &--small
+          padding-top: 150px
+          &::after
+            top: -150px
+            right: -800px
+  .text
+    font-size: 42px
+  .hero
+    &__text
+      font-size: 85px
+      padding-right: 30px
+      &--italic
+        line-height: 70px
+@media screen and (max-width: 1440px)
+
+  .about
+    &__image-block
+      width: 100%
+    &__row
+      &:nth-child(2)
+        margin-top: 0
+  .nav
+    max-width: 500px
+    &-list
+      &__link
+        font-size: 22px
+@media screen and (max-width: 1200px)
+  .text
+    font-size: 30px
+  .about
+    &__text
+      &--center
+        max-width: 450px
+      &-block
+        max-width: 450px
+        &--small
+          padding-top: 95px
+          padding-right: 30px
+          &::after
+            width: 400px
+            height: 400px
+            right: -400px
+            top: 0
+        &--big
+          padding-left: 30px
+          &::after
+            width: 400px
+            height: 400px
+            right: 0
+            top: 0
+  .hero
+    padding-top: 30px
+    &-right
+      flex-basis: 40%
+    &-left
+      padding-top: 30px
+      flex-basis: 60%
+    &__text
+      font-size: 65px
+      padding-right: 40px
+      &--italic
+        line-height: 54px
+@media screen and (max-width: 992px)
+  .text
+    font-size: 28px
+  .hero
+    &-left
+      padding-top: 10px
+    &__text
+      font-size: 50px
+    &-right
+      &__text
+        font-size: 22px
+  .about
+    &__link
+      font-size: 20px
+    &__text
+      &--center
+        max-width: 410px
+      &--first
+        margin-bottom: 20px
+  .nav
+    max-width: 400px
+    &-list
+      &__link
+        font-size: 18px
+@media screen and (max-width: 768px)
+  .hero
+    padding-bottom: 30px
+    &__text
+      font-size: 35px
+    &-right
+      &__text
+        font-size: 18px
+  .about
+    &__text
+      &--center
+        margin-bottom: 40px
+      &-block
+        &--small
+          padding-top: 65px
+          &::after
+            display: none
+        &--big
+          &::after
+            display: none
+  .companies
+    max-width: 450px
+    min-height: 180px
+@media screen and (max-width: 576px)
+  .container
+    width: 85%
+  .header
+    &-wrapper
+      padding: 97px 0 58px
+      width: 75%
+    &-logo
+      &-link
+        width: 37px
+  .nav-list
+    display: none
+  .hero
+    padding-top: 0
+    padding-bottom: 100px
+    &__container
+      flex-direction: column
+    &__text
+      margin: 0 0 42px 0
+      padding: 0
+      letter-spacing: -0.7px
+      line-height: 36px
+      &--italic
+        line-height: 28px
+    &-right
+      padding: 0 20px
+      &__text
+        background-image: url('../images/arrow.svg')
+        background-position-x: 30px
+        padding-left: 10px
+        background-repeat: no-repeat
+        display: inline-block
+        display: flex
+        justify-content: center
+        align-items: center
+        &--bold
+          margin-left: 5px
+      &__video
+        margin-bottom: 3px
+  .about
+    &__row
+      flex-direction: column
+      &:nth-child(2)
+        flex-direction: column
+        align-items: center
+    &__image
+      &-block
+        margin-bottom: 24px
+    &__text
+      &--first
+        margin-bottom: 20px
+      &-block
+        text-align: center
+        &--big
+          padding: 0
+        &--small
+          padding: 0
+  .companies
+    min-height: 300px
+    &__item
+      flex-basis: 45%
+@media screen and (max-width: 400px)
+  .text
+    max-width: 280px
+    line-height: 28px
+    letter-spacing: 0.1px
+  .about
+    &__row
+      &:first-child
+        margin-bottom: 65px
+    &__image
+      &-block
+        margin-bottom: 16px
+    &__link
+      font-size: 28px
+      margin-top: 22px
+    &__text
+      &--first
+        margin-bottom: 0
+      &--center
+        margin-bottom: 57px
+  .companies
+    max-width: 250px
+    min-height: 330px
+    &__item
+      flex-basis: 34%
+      &:nth-child(1)
+        order: 1
+      &:nth-child(2)
+        order: 3
+      &:nth-child(3)
+        order: 8
+      &:nth-child(4)
+        order: 6
+      &:nth-child(5)
+        order: 2
+      &:nth-child(6)
+        order: 7
+      &:nth-child(7)
+        order: 4
+      &:nth-child(8)
+        order: 5
+@media screen and (min-width: 992px)
+  .nav
+    &-list
+      &__link
+        &:hover
+          color: #FEA430
+  .about
+    &__link
+      &:hover
+        color: #ffffff
+        
+
+

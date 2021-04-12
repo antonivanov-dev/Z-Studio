@@ -1,0 +1,82 @@
+.about
+  position: relative
+  z-index: 2
+  &__container
+    width: 100%
+    display: flex
+    flex-direction: column
+    margin-top: -70px
+  &__row
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &:nth-child(2)
+      align-items: flex-start
+      flex-direction: row-reverse
+      margin-top: -80px
+  &__text-block
+    display: flex
+    flex-direction: column
+    position: relative
+    &--big
+      max-width: 830px
+      &::after
+        content: ''
+        position: absolute
+        right: -100px
+        top: -100px
+        transform: translateX(100px)
+        width: 860px
+        height: 860px
+        background-color: #ffffff
+        opacity: 0.05
+        border-radius: 100%
+        filter: blur(150px)
+        z-index: -1
+    &--small
+      padding-top: 280px
+      max-width: 670px
+      margin-left: auto
+      margin-right: 60px
+      &::after
+        content: ''
+        position: absolute
+        right: -1000px
+        top: 0
+        transform: translateX(100px)
+        width: 860px
+        height: 860px
+        background-color: #ffffff
+        opacity: 0.05
+        border-radius: 100%
+        filter: blur(150px)
+  &__text
+    margin: 0
+    &--first
+      margin-bottom: 64px
+    &--center
+      max-width: 740px
+      text-align: center
+      margin-bottom: 92px
+  &__link
+    margin-top: 50px
+  &__footer
+    max-width: 1040px
+    margin: auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding-top: 125px
+.companies
+  display: flex
+  flex-wrap: wrap
+  min-height: 272px
+  max-width: 100%
+  justify-content: space-between
+  &__item
+    flex-basis: 22%
+    display: flex
+    justify-content: center
+    align-items: center
+    
+      

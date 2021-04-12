@@ -1,0 +1,65 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Z-Studio
+    link(rel="stylesheet", href="css/styles.min.css")
+  body 
+    header.header
+      div.header-wrapper
+        a(href="/").header-logo-link
+          img(src="images/logo.png", alt="logo")
+        nav.nav.header__nav
+          ul.nav-list
+            li.nav-list__item
+              a(href="/").nav-list__link Курсы
+            li.nav-list__item
+              a(href="/").nav-list__link Наймите выпускника
+            li.nav-list__item
+              a(href="/").nav-list__link Личный кабинет
+    main
+      section.hero
+        .container.hero__container
+          .hero-left
+            p.hero__text  школа <br/> диджитал навыков от <span class="hero__text--italic">практикующих</span> профессионалов
+          div.hero-right
+            img(src="images/video.png", alt="video").hero-right__video
+            p.hero-right__text О школе 
+              span.hero-right__text--bold за 72 секунды
+      section.about
+        .about__container
+          .about__row
+            .about-block.about__image-block
+              img(src="images/bg1.svg", alt="")
+            .about-block.about__text-block.about__text-block--big
+              p.text.about__text Каждый преподаватель это либо специалист нашей студии, либо владелец бизнеса
+              a(href="/").link.about__link портфолио студии
+          .about__row
+            .about-block.about__image-block
+              img(src="images/bg2.svg", alt="")
+            .about-block.about__text-block.about__text-block--small
+              p.text.about__text.about__text--first Мы не приглашаем именитых гостей ради заголовков 
+              p.text.about__text У нас только практические знания для приобретения навыка
+          .about__footer 
+            p.text.about__text.about__text--center За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники
+            .companies.about__companies
+              .companies__item 
+                img(src="images/tnt.png", alt="TNT").companies__logo
+              .companies__item 
+                img(src="images/cola.png", alt="Coca-Cola").companies__logo
+              .companies__item
+                img(src="images/splat.png", alt="Splat").companies__logo
+              .companies__item
+                img(src="images/blackStar.png", alt="Black-Star").companies__logo
+              .companies__item
+                img(src="images/toyota.png", alt="Toyota").companies__logo
+              .companies__item 
+                img(src="images/henkel.png", alt="Henkel").companies__logo
+              .companies__item 
+                img(src="images/baikal.png", alt="Baikal").companies__logo
+              .companies__item 
+                img(src="images/department.png", alt="Department").companies__logo
+
+          
