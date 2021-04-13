@@ -100,29 +100,6 @@
       &__link
         font-size: 18px
 @media screen and (max-width: 768px)
-  .hero
-    padding-bottom: 30px
-    &__text
-      font-size: 35px
-    &-right
-      &__text
-        font-size: 18px
-  .about
-    &__text
-      &--center
-        margin-bottom: 40px
-      &-block
-        &--small
-          padding-top: 65px
-          &::after
-            display: none
-        &--big
-          &::after
-            display: none
-  .companies
-    max-width: 450px
-    min-height: 180px
-@media screen and (max-width: 576px)
   .container
     width: 85%
   .header
@@ -150,8 +127,7 @@
       padding: 0 20px
       &__text
         background-image: url('../images/arrow.svg')
-        background-position-x: 30px
-        padding-left: 10px
+        padding-left: 20px
         background-repeat: no-repeat
         display: inline-block
         display: flex
@@ -180,10 +156,72 @@
         &--small
           padding: 0
   .companies
-    min-height: 300px
+    max-width: 250px
+    min-height: 330px
     &__item
-      flex-basis: 45%
+      flex-basis: 50%
+      &:nth-child(1)
+        order: 1
+        padding-top: 11px
+        padding-left: 14px
+        &>img
+          max-width: 108px
+      &:nth-child(2)
+        order: 3
+        &>img
+          margin-left: -23px
+      &:nth-child(3)
+        order: 8
+        padding-top: 10px
+        &>img
+          max-width: 102px
+          margin-bottom: 2px
+          margin-left: -2px
+      &:nth-child(4)
+        order: 6
+        padding-top: 7px
+        &>img
+          margin-bottom: -6px
+          margin-right: -27px
+      &:nth-child(5)
+        flex-basis: 43%
+        padding-top: 2px
+        padding-right: 2px
+        order: 2
+        &>img
+          max-width: 56px
+      &:nth-child(6)
+        order: 7
+        &>img
+          max-width: 83px
+          margin-bottom: -20px
+          margin-left: -17px
+      &:nth-child(7)
+        order: 4
+        &>img
+          margin-top: 8px
+          margin-right: -36px
+      &:nth-child(8)
+        order: 5
+        &>img
+          max-width: 114px
+          margin-bottom: -12px
+          margin-left: -36px
 @media screen and (max-width: 400px)
+  .hero
+    &-left
+      padding-top: 9px
+    &__text
+      font-size: 36px
+      letter-spacing: -1.3px
+    &-right
+      &__text
+        letter-spacing: 0.1px
+        font-size: 18px
+        background-position-x: 8px
+        background-position-y: -1px
+        padding-left: 12px
+        width: 80%
   .text
     max-width: 280px
     line-height: 28px
@@ -194,7 +232,19 @@
         margin-bottom: 65px
     &__image
       &-block
-        margin-bottom: 16px
+        position: relative
+        max-width: 337.5px
+        min-height: 296px
+        &>img
+          position: absolute
+          top: 0
+          left: 16px
+        &--second
+          max-width: 320px
+          min-height: 249px
+          &>img
+            left: 0
+            top: 10px
     &__link
       font-size: 28px
       margin-top: 22px
@@ -203,27 +253,10 @@
         margin-bottom: 0
       &--center
         margin-bottom: 57px
-  .companies
-    max-width: 250px
-    min-height: 330px
-    &__item
-      flex-basis: 34%
-      &:nth-child(1)
-        order: 1
-      &:nth-child(2)
-        order: 3
-      &:nth-child(3)
-        order: 8
-      &:nth-child(4)
-        order: 6
-      &:nth-child(5)
-        order: 2
-      &:nth-child(6)
-        order: 7
-      &:nth-child(7)
-        order: 4
-      &:nth-child(8)
-        order: 5
+      &-block
+        &--small
+          padding-top: 20px
+  
 @media screen and (min-width: 992px)
   .nav
     &-list
@@ -234,6 +267,14 @@
     &__link
       &:hover
         color: #ffffff
+  .hero
+    &-right
+      &:hover
+        &>.hero-right__text
+          &::after
+            width: 100%
+            transition: all .4s ease-out
+
         
 
 
