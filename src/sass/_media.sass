@@ -109,8 +109,24 @@
     &-logo
       &-link
         width: 37px
-  .nav-list
-    display: none
+  .nav
+    &-list
+      flex-direction: column
+  .header
+    &__nav
+      position: fixed;
+      top: 150px;
+      right: -200vw
+      max-width: 250px
+      padding: 10px 30px;
+      z-index: 99;
+      -webkit-transition: 0.3s ease;
+      transition: 0.3s ease;
+      background-color: #fff
+      &--active
+        right: 0
+        &>.nav-list
+          color: #000000
   .hero
     padding-top: 0
     padding-bottom: 100px
@@ -207,6 +223,8 @@
           max-width: 114px
           margin-bottom: -12px
           margin-left: -36px
+  .burger
+    display: flex
 @media screen and (max-width: 400px)
   .hero
     &-left

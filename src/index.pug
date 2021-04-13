@@ -11,7 +11,11 @@ html(lang="ru")
       div.header-wrapper
         a(href="/").header-logo-link
           img(src="images/logo.png", alt="logo")
-        nav.nav.header__nav
+        button.burger.header__burger#burger
+          span.burger__line
+          span.burger__line
+          span.burger__line
+        nav.nav.header__nav#nav
           ul.nav-list
             li.nav-list__item
               a(href="/").nav-list__link Курсы
@@ -62,5 +66,4 @@ html(lang="ru")
                 img(src="images/baikal.png", alt="Baikal").companies__logo.companies__logo--baikal
               .companies__item 
                 img(src="images/department.png", alt="Department").companies__logo.companies__logo--department
-
-          
+    script(src="js/index.js")

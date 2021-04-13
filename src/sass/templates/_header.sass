@@ -5,7 +5,37 @@
     margin: auto
     display: flex
     justify-content: space-between
+    align-items: center
     padding: 59px 0
+.burger
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  background-color: transparent
+  border: none
+  outline: none
+  width: 30px
+  height: 20px
+  padding: 0
+  cursor: pointer
+  display: none
+  &__line
+    height: 2px
+    width: 100%
+    background-color: #fff
+    transition: all .3s cubic-bezier(0.65, 0.05, 0.36, 1) 0s
+  &--active
+    &>.burger__line
+      &:first-child
+        transform: translateY(6px) rotate(45deg);
+      &:last-child
+        transform: translateY(-12px) rotate(-45deg);
+      &:nth-child(2)
+        display: none
+
+        
 .nav
   width: 100%
   max-width: 657px
@@ -13,8 +43,9 @@
     display: flex
     justify-content: space-between
     padding-top: 8px
+    color: inherit
     &__link
-      color: #ffffff
+      color: inherit
       text-decoration: none
       font-weight: 350
       font-size: 24px

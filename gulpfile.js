@@ -12,6 +12,38 @@ const notify = require("gulp-notify");
 const del = require("del");
 const ttf2woff = require("gulp-ttf2woff");
 const ttf2woff2 = require("gulp-ttf2woff2");
+const webpackStream = require('webpack-stream');
+const uglify = require('gulp-uglify-es').default;
+
+function scripts() {
+  return src('./src/js/index.js')
+      .pipe(webpackStream({
+          output: {
+              filename: 'index.js'
+          },
+          module: {
+              rules: [
+                  {
+                      test: /\.m?js$/,
+                      exclude: /node_modules/,
+                      use: {
+                          loader: 'babel-loader',
+                          options: {
+                              presets: [
+                                  ['@babel/preset-env', { targets: "defaults" }]
+                              ]
+                          }
+                      }
+                  }
+              ]
+          }
+      }))
+      .pipe(sourcemaps.init())
+      .pipe(uglify().on('error', notify.onError()))
+      .pipe(sourcemaps.write('.'))
+      .pipe(dest('./dist/js/'))
+      .pipe(browserSync.stream())
+}
 
 function fonts() {
   src("./src/fonts/**.ttf")
@@ -67,6 +99,7 @@ function watchFiles() {
   watch(["src/sass/**/*.sass", "src/sass/**/*.scss"], styles);
   watch("src/index.pug", pugRender);
   watch("dist/*.html").on("change", browserSync.reload);
+  watch('./src/js/**/*.js', scripts);
 }
 
-exports.default = series(clean, parallel(imgRefactor, fonts), pugRender, styles, watchFiles);
+exports.default = series(clean, parallel(fonts, scripts, imgRefactor), pugRender, styles, watchFiles);
