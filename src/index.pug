@@ -50,20 +50,8 @@ html(lang="ru")
           .about__footer 
             p.text.about__text.about__text--center За 3 года через нас прошло более 7 000 специалистов, среди которых сотрудники
             .companies.about__companies
-              .companies__item 
-                img(src="images/tnt.png", alt="TNT").companies__logo.companies__logo--tnt
-              .companies__item 
-                img(src="images/cola.png", alt="Coca-Cola").companies__logo.companies__logo--cola
-              .companies__item
-                img(src="images/splat.png", alt="Splat").companies__logo.companies__logo--splat
-              .companies__item
-                img(src="images/blackStar.png", alt="Black-Star").companies__logo.companies__logo--black-star
-              .companies__item
-                img(src="images/toyota.png", alt="Toyota").companies__logo.companies__logo--toyota
-              .companies__item 
-                img(src="images/henkel.png", alt="Henkel").companies__logo.companies__logo--henkel
-              .companies__item 
-                img(src="images/baikal.png", alt="Baikal").companies__logo.companies__logo--baikal
-              .companies__item 
-                img(src="images/department.png", alt="Department").companies__logo.companies__logo--department
+              - var companies = ["tnt", "cola", "splat", "blackStar", "toyota", "henkel", "baikal", "department"]
+              each item in companies
+                .companies__item 
+                  img(src='images/' + item + '.png', alt=item).companies__logo
     script(src="js/index.js")
