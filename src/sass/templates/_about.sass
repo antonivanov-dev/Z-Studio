@@ -17,6 +17,7 @@
   &__text-block
     display: flex
     flex-direction: column
+    align-items: flex-start
     position: relative
     &--big
       max-width: 830px
@@ -50,7 +51,7 @@
         opacity: 0.05
         border-radius: 100%
         filter: blur(150px)
-        z-index: -1px
+        z-index: -1
   &__text
     margin: 0
     &--first
@@ -60,7 +61,19 @@
       text-align: center
       margin-bottom: 92px
   &__link
+    position: relative
+    text-decoration: none
     margin-top: 50px
+    &::after
+      content: ''
+      width: 0
+      position: absolute
+      left: 0
+      bottom: 5px
+      height: 2px
+      background-color: #Ff9b07
+      transition: all .3s ease-out
+      width: 100%
   &__footer
     max-width: 1040px
     margin: auto

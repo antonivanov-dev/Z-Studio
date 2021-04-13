@@ -285,11 +285,15 @@
     &-list
       &__link
         &:hover
-          color: #FEA430
+          &::after
+            width: 100%
+            transition: all .4s ease-out 
   .about
     &__link
       &:hover
         color: #ffffff
+        &::after
+          background-color: #ffffff
   .hero
     &-right
       &:hover
